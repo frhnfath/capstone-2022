@@ -3,7 +3,7 @@ int main() {
 	int r;
 	float luas;
 	scanf("%d", &r);
-	luas=3.14*r*r;
+	luas=r%4;
 	printf("%.2f\n", luas);
 	return 0;
 }
