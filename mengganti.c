@@ -1,12 +1,14 @@
 #include <stdio.h>
 int main() {
-	int a,b,c;
-	scanf("%d %d",&a,&b);
+	unsigned long int a,b,c,i=0;
+	scanf("%lu %lu",&a,&b);
 	while(c!=-1){
-        scanf("%d",&c);
-		if (c==a) printf("%d ",b);
-		else if (c==b) printf("%d ",a);
-		else printf("%d ",c);
+        scanf("%lu",&c);
+        if (c==-1) break;
+        if (i>0) printf(" ");
+		if (c==a) printf("%lu",b);
+		else printf("%lu",c);
+		i++;
 	}
 	printf("\n");
 	return 0;

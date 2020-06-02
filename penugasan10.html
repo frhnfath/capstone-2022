@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+	
+	<head>
+		<title>Biodata Mahasiswa Ilkom</title>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<form>
+			<h1 style="font-family:Times">Biodata Mahasiswa Ilkom<br>
+			</h1>
+			<p>
+				NIM<br>
+				<input type="text" required
+				maxlength="9" size="9">
+			</p>
+			<p>
+				Nama<br>
+				<input type="text" required>
+			</p>
+			<p>
+				Jenis Kelamin<br>
+				<label><input type="radio" name="jk"value="L" checked>Laki-laki</label>
+				<label><input type="radio" name="jk"value="P">Perempuan</label>
+			</p>
+			<p>
+				Agama<br>
+				<select>id="Agama"
+					<option value="Islam">Islam</option>
+					<option value="Kristen">Kristen</option>
+					<option value="Katholik">Katholik</option>
+					<option value="Hindu">Hindu</option>
+					<option value="Buddha">Buddha</option>
+					<option value="Kong Hu Chu">Kong Hu Chu</option>
+					<option value="Lainnya">Lainnya</option>
+				</select>
+			<p>
+				Alamat Rumah<br>
+				<textarea id="alamat" required=""></textarea>
+			</p>
+			<p>
+				Telepon<br>
+				<input type="text" required
+				maxlength="12" size="9">
+			</p>
+			<p>
+				Email<br>
+				<input type="text" required size="9">
+			</p>
+			<p>
+				<input type="submit" name="Submit">
+
+
+		</form>
+	</body>

@@ -16,7 +16,7 @@ int main() {
 			tim1=tim;
 		}
 	}
-	if ((menang1-kalah1)!=0 || (seri1%2)!=0) printf("-1\n");
+	if ((menang1-kalah1)!=0 || (seri1%2)!=0st) printf("-1\n");
 	else printf("%d %d\n", tim1,result);
 	return 0;
 }
