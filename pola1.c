@@ -1,22 +1,16 @@
 #include <stdio.h>
 int main() {
-    int n,i,j,k;
+    int n,a;
     scanf("%d",&n);
-    j=n;
-    k=n;
+    a=1;
     for (int i = 0; i < n; ++i)
     {
-    	for (int i = 1; i < k; ++i)
-    	{
-    		printf(" ");
-    		k++;
-    	}
-        for (int i = 0; i < j; ++i)
+        for (int j = 0; j < a; ++j)
         {
             printf("*");
         }
         printf("\n");
-        j--;
+        a+=1;
     }
     return 0;
 }

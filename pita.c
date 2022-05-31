@@ -34,7 +34,7 @@ int main() {
 			{
 				printf("*");
 			}
-			if ((c-1)==n) break;
+			if ((c-b)==n) break;
 			printf("\n");
 			if (b==m) break;
 			for (int ik = 0; ik < a-2; ++ik)

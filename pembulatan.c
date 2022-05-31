@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <math.h>
 int main () {
 	long int a,b;

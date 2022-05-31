@@ -8,7 +8,7 @@ int main() {
 		b=a;
 		for (int j = 0; j < a; ++j)
 		{
-			for (int k = 0; k < a-1; ++k)
+			for (int k = 0; k < b-1; ++k)
 			{
 				printf(" ");
 			}
