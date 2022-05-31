@@ -7,4 +7,11 @@
     <string name="sign_in">SIGN IN</string>
     <string name="other_methods">OTHER METHODS</string>
     <string name="didn_t_have_an_account_yet">Didn\'t have an account yet?</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="i_have_read_the">I have read the</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>
