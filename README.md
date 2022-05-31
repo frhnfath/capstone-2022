@@ -1,1 +1,2 @@
-# capstone-2022
+# Bangkit Capstone Project 2022
+## Mobile Application Repository
