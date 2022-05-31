@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="search">Cari</string>
+    <string name="username_enter">Masukkan Username</string>
+    <string name="username">Username</string>
+    <string name="html_url">Html_url</string>
+    <string name="name">Nama</string>
+    <string name="company">Perusahaan</string>
+    <string name="blog">Blog</string>
+    <string name="location">Lokasi</string>
+    <string name="background">Latar Belakang</string>
+    <string name="user_not_found">User Tidak Ditemukan</string>
+    <string name="follower">Pengikut</string>
+    <string name="following">Diikuti</string>
+    <string name="change_language">Ganti Bahasa</string>
+</resources>

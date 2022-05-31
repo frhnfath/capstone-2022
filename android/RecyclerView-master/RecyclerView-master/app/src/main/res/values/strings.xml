@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RecyclerViewSubmission</string>
+    <string name="player_name">Nama Pemain</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="item">Item</string>
+    <string name="about">About</string>
+</resources>

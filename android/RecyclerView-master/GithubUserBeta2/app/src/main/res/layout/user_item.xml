@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/listAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@color/design_default_color_primary_dark" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="65dp"
+        app:layout_constraintStart_toEndOf="@id/listAvatar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/html_url"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toEndOf="@id/listAvatar"
+        app:layout_constraintTop_toBottomOf="@id/tvUsername" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2 @@
+rootProject.name = "NyLiveData"
+include ':app'

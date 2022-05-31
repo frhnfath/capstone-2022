@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IPB Training App</string>
+    <string name="my_application">My Application</string>
+    <string name="insert_your_name">Insert your Name</string>
+    <string name="insert_your_age">Insert your Age</string>
+    <string name="insert_your_gender">Insert your Gender</string>
+    <string name="insert_your_address">Insert your Address</string>
+    <string name="enter">Enter</string>
+</resources>

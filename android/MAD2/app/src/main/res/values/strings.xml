@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MAD2</string>
+    <string name="my_application">My Application</string>
+    <string name="masukkan_nama_anda">Masukkan Nama Anda</string>
+    <string name="masukkan_umur_anda">Masukkan Umur Anda</string>
+    <string name="masukkan_gender_anda">Masukkan Gender Anda</string>
+    <string name="masukkan_alamat_anda">Masukkan Alamat Anda</string>
+    <string name="enter">Enter</string>
+</resources>

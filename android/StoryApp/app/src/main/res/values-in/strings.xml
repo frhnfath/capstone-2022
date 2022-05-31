@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Story App</string>
+    <string name="logo">logo</string>
+    <string name="username_hint">Masukkan Username</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Masukkan Password</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+    <string name="_6_characters_minimum">Minimal 6 Karakter</string>
+    <string name="register">Daftar</string>
+    <string name="sign_in">Masuk</string>
+    <string name="ask_account">Belum punya akun? Daftar disini</string>
+    <string name="ask_sign">Sudah punya akun? Masuk disini</string>
+    <string name="error_password">Password harus berisi minimal 6 karakter</string>
+    <string name="email">Email</string>
+    <string name="insert_email">Masukkan Email</string>
+</resources>
