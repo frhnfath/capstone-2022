@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AmbuHelp</string>
+    <string name="sign_in_to_your_account">Sign In to Your Account</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="or_sign_in_with">OR SIGN IN WITH</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="other_methods">OTHER METHODS</string>
+    <string name="didn_t_have_an_account_yet">Didn\'t have an account yet?</string>
+</resources>
