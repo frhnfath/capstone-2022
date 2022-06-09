@@ -19,10 +19,5 @@ class RegisterActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-
-        binding.btnGoogle.setOnClickListener {
-            val intent = Intent(this, GoogleMethodsActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
