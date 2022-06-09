@@ -14,4 +14,11 @@
     <string name="i_have_read_the">I have read the</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="already_have_an_account">Already have an account?</string>
+    <string name="email">Email</string>
+    <string name="search_hospital">SEARCH HOSPITAL</string>
+    <string name="nearest_hospital">Nearest Hospital</string>
+    <string name="nearest_hospital_address">Nearest Hospital Address</string>
+    <string name="search_ambulance">SEARCH AMBULANCE</string>
+    <string name="nearest_ambulance_location">Nearest Ambulance Location</string>
+    <string name="nearest_ambulance">Nearest Ambulance</string>
 </resources>
