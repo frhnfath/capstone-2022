@@ -1,0 +1,81 @@
+<?php
+
+namespace App\Http\Controllers\API;
+
+use App\Helpers\ApiFormatter;
+use App\Http\Controllers\Controller;
+use App\Models\Akun;
+use App\Models\Hospital;
+use Illuminate\Http\Request;
+use Exception;
+use Illuminate\Support\Str;
+use DB;
+use Facade\FlareClient\Http\Response;
+
+class ShortHospital extends Controller
+{
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+     public function short(Request $request)
+     {
+        try
+        {
+            $request -> validate([
+                'lintang' => 'required',
+                'bujur' => 'required'
+            ]);
+            
+            $user = ['x1' => $request -> lintang,
+                     'y1' => $request -> bujur];
+
+            $resource = DB::select('select * from hospital where kode != 0');
+            $jarak = array();
+            for($i=0; $i<36; $i++)
+            {
+                $temp = $resource[$i];
+                $dLat = ($temp->lintang - $user['x1']) * M_PI / 180.0;
+                $dLon = ($temp->bujur - $user['y1']) * M_PI / 180.0;
+            
+                // convert to radians
+                $lat1 = ($temp->lintang) * M_PI / 180.0;
+                $lat2 = ($user['x1']) * M_PI / 180.0;
+            
+                // apply formula
+                $a = pow(sin($dLat / 2), 2) + pow(sin($dLon / 2), 2) * cos($lat1) * cos($lat2);
+                $rad = 6371;
+                $c = 2 * asin(sqrt($a));
+                
+                $hasil = $rad * $c;
+                
+                $jarak[$temp->kode] = $hasil;
+            }
+            asort($jarak);
+            foreach ($jarak as $key => $val)
+            {
+                $bed_check = DB::select('select bed_avail from hospital where kode = ?', [$key]);
+                if($bed_check[0]->bed_avail > 0)
+                {
+                    $data = Hospital::where('kode','=',$key)->get()->toArray();
+                    if($data)
+                    {
+                        DB::update('update hospital set bed_avail = ? where kode = ?', [$bed_check[0]->bed_avail-1, $key]);
+                        return ApiFormatter::createApi(200, 'Success', $data);
+                    }
+                    else 
+                    {
+                        return ApiFormatter::createApi(400, 'Fail');
+                    }
+                    break;
+                }
+            }
+        }
+        catch (Exception $error)
+        {
+            return ApiFormatter::createApi(400, 'Fail');
+        }
+     }
+}

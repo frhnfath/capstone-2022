@@ -1,0 +1,26 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+skip_files:
+  -.env
+
+env_variables:
+  APP_LOG: errorlog
+  APP_DEBUG: true
+  APP_KEY: base64:FcgxMNVWMp+Jox0MfqqP/n7U4ifFTd/b00zAyzHrTUQ=
+  STORAGE_DIR: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  DB_CONNECTION: mysql
+  DB_HOST: 127.0.0.1
+  DB_PORT: 3306
+  DB_DATABASE: yukapi
+  DB_USERNAME: ikhsan
+  DB_PASSWORD: ikhsan
+  DB_SOCKET: "/cloudsql/c22-ps173:us-central1:yukapi"
+
+beta_settings:
+  cloud_sql_instances: "c22-ps173:us-central1:yukapi"
