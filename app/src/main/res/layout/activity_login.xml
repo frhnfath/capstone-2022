@@ -52,9 +52,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edt_password"
+        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/tv_password"
         android:layout_marginTop="10dp"
-        android:hint="@string/username" />
+        android:hint="@string/password" />
 
     <Button
         android:layout_width="match_parent"
@@ -65,31 +66,6 @@
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/dark_teal"
         android:text="@string/sign_in" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:id="@+id/linear_layout"
-        app:layout_constraintTop_toBottomOf="@id/btn_login"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/or_sign_in_with"
-            android:textColor="@color/grey"
-            android:layout_marginEnd="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other_methods"
-            android:id="@+id/tv_method"
-            android:textStyle="bold"
-            android:textColor="@color/dark_teal"/>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -117,5 +93,15 @@
             android:textStyle="bold"/>
 
     </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

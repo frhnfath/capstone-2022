@@ -2,6 +2,7 @@ package com.frhnfath.ambuhelp.layout
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.frhnfath.ambuhelp.R
 import com.frhnfath.ambuhelp.data.StateResult
+import com.frhnfath.ambuhelp.data.preferences.SessionManager
 import com.frhnfath.ambuhelp.data.response.DataItem
 import com.frhnfath.ambuhelp.databinding.ActivityMapsBinding
 import com.frhnfath.ambuhelp.viewmodel.MainViewModel
@@ -31,6 +33,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var sessionManager: SessionManager
+
     private val mainViewModel: MainViewModel by viewModels {
         ViewModelFactory.getInstance()
     }
@@ -55,6 +59,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        sessionManager = SessionManager(this)
         binding.progressBar.visibility = View.INVISIBLE
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -64,6 +69,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+
+        binding.btnSignout.setOnClickListener {
+            sessionManager.fetchToken()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun onMapReady(googleMap: GoogleMap) {

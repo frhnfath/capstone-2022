@@ -26,4 +26,7 @@
     <string name="phone_number">Phone Number</string>
     <string name="hospital_number">Hospital Number</string>
     <string name="bed_available">Bed Available</string>
+    <string name="name">Name</string>
+    <string name="telephone">Telephone</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
