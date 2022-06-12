@@ -1,8 +1,9 @@
-package com.frhnfath.ambuhelp
+package com.frhnfath.ambuhelp.layout
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.frhnfath.ambuhelp.R
 import com.frhnfath.ambuhelp.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {

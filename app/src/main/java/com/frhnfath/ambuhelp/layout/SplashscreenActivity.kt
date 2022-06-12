@@ -1,10 +1,9 @@
-package com.frhnfath.ambuhelp
+package com.frhnfath.ambuhelp.layout
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.WindowManager
 import com.frhnfath.ambuhelp.databinding.ActivitySplashscreenBinding
 
 class SplashscreenActivity : AppCompatActivity() {
@@ -17,7 +16,7 @@ class SplashscreenActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler().postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, MapsActivity::class.java)
             startActivity(intent)
             finish()
         }, 1000)

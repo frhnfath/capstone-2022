@@ -1,4 +1,4 @@
-package com.frhnfath.ambuhelp
+package com.frhnfath.ambuhelp.layout
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,12 +12,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // function to change activity
-        binding.tvMethod.setOnClickListener {
-            val intent = Intent(this, GoogleMethodsActivity::class.java)
-            startActivity(intent)
-        }
 
         binding.registerTv.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
