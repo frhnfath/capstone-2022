@@ -3,7 +3,6 @@ package com.frhnfath.ambuhelp.data.preferences
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
-import com.frhnfath.ambuhelp.R
 import com.frhnfath.ambuhelp.data.response.TokenDataItem
 
 internal class SessionManager (context: Context) {

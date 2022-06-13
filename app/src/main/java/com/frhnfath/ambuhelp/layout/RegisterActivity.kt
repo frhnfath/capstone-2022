@@ -28,8 +28,8 @@ class RegisterActivity : AppCompatActivity() {
         binding.btnRegister.setOnClickListener {
             val user = userRegister()
             Log.d(TAG, "onCreate: user" + Arrays.toString(user))
-            val state = postUser(user[0], user[1], user[2], user[3])
-            if (state) {
+            if (user[0] != "empty")  {
+                postUser(user[0], user[1], user[2], user[3])
                 Toast.makeText(applicationContext, "You are registered. Sign in!", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
@@ -38,14 +38,14 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         binding.loginTv.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
     }
 
     private fun userRegister(): Array<String> {
-        val name = binding.edtName.text.toString()
+        var name = binding.edtName.text.toString()
         if (name.isEmpty()) {
             binding.edtName.error = "Name is required"
             binding.edtName.requestFocus()
@@ -74,7 +74,9 @@ class RegisterActivity : AppCompatActivity() {
             tnc.error = "Please read and checked the T&C"
             tnc.requestFocus()
         }
-
+        if (name.isEmpty() or email.isEmpty() or password.isEmpty() or telepon.isEmpty()) {
+            name = "empty"
+        }
         return arrayOf(name, email, password, telepon)
     }
 
