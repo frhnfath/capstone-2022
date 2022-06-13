@@ -11,7 +11,6 @@ internal class SessionManager (context: Context) {
     companion object {
         private const val TOKEN = "token"
         private const val PREFS_NAME = "user_pref"
-        private const val LOGIN = "is_login"
     }
 
     fun saveToken(token: List<TokenDataItem>) {
